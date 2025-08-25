@@ -1,19 +1,3 @@
-dia = str
-dd = int
-mm = int
-fecha = str
-partes = str
-dia_semana = str
-fecha_num = str
-semana = ["lunes","martes","miércoles","jueves","viernes"]
-aprobados = int
-desaprobados = int
-porcentaje_aprob = float
-asistencia = float
-alumnos_inscriptos = int
-arancel = float
-
-
 # Separar fecha en tres variables ()
 fecha = input("Ingrese la fecha de la siguiente manera dia, DD/MM: ")
 partes = fecha.split(",")
@@ -25,6 +9,8 @@ fecha_num = partes[1].strip()
 partes_fecha = fecha_num.split("/")
 if len(partes_fecha) != 2:
     print("ERROR, respete el formato pedido.")
+
+semana = ["lunes","martes","miércoles","jueves","viernes"] # Lista con los días de la semana
 
 dd = int(partes_fecha[0])
 mm = int(partes_fecha[1])
