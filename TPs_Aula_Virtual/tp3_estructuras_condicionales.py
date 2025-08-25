@@ -40,13 +40,10 @@ print("Ejercicio 4:")
 edad_persona = int(input("Ingrese su edad: "))
 if (edad_persona < 12):
     print("Ustede pertenece a la categoría: Niño/a")
-
 elif (edad_persona >= 12 or edad_persona < 18):
     print("Usted pertenece a la categoría: Adolecente")
-
 elif (edad_persona >= 18 or edad_persona < 30):
     print("Usted pertenece a la categoría: Adulto/a joven")
-
 else:
     print("Usted pertenece a la categoría: Adulto/a")
 
@@ -73,13 +70,10 @@ print(f'Números aleatorios: {nums_aleatorios}')
 
 if (mean(nums_aleatorios) > median(nums_aleatorios) and median(nums_aleatorios) > mode(nums_aleatorios)):
     print("El sesgo es positivo")
-
 elif (mean(nums_aleatorios) < median(nums_aleatorios) and median(nums_aleatorios) < mode(nums_aleatorios)):
     print("El sesgo es negativo")
-
 elif (mean(nums_aleatorios) == median(nums_aleatorios) and median(nums_aleatorios) == mode(nums_aleatorios)):
     print("No hay sesgo")
-
 else:
     pass
 
@@ -93,7 +87,6 @@ frase_usuario = input("Ingrese una frase: ")
 
 if (frase_usuario and frase_usuario[-1].lower() in 'aeiou'):
     print(f'{frase_usuario}!')
-
 else:
     print(frase_usuario)
 
@@ -114,13 +107,10 @@ optn = int(input("Ingrese el número correspodiente a la opción deseada: "))
 print("")
 if(optn == 1): 
     print(nombre.upper())
-
 elif(optn == 2):
     print(nombre.lower())
-
 elif(optn == 3):
     print(f"{nombre[0,1].upper()}{nombre[1:n + 1]}")
-
 else: 
     pass
 
@@ -140,22 +130,16 @@ mag_ter = float(input("Ingrese la magnitud del terremoto:"))
 
 if (mag_ter < 3):
     print("Categoría del terremoto: muy leve (imperceptible)")
-
 elif (mag_ter >= 3 and mag_ter < 4):
     print("Categoría del terremoto: leve (ligeramente perceptible)")
-
 elif (mag_ter >= 4 and mag_ter < 5):
     print("Categoría del terremoto: Moderado (sentido por personas, pero sin causar daños)")
-
 elif (mag_ter >= 5 and mag_ter < 6):
     print("Categoría del terremoto: Fuerte (puede causar daños en estructuras débiles)")
-
 elif (mag_ter >= 6 and mag_ter < 7):
     print("Categoría del terremoto: Muy fuerte (puede causar daños significativos)")
-
 elif (mag_ter >= 7):
     print("Categorpia del terremoto: Extremo (puede causar graves daños a gran escala)")
-
 else: pass
 
 print("\n\n")
@@ -174,29 +158,22 @@ print("")
 if (hemisferio == "N"):
     if (fecha_usuario >= date(2000, 12, 21) and fecha_usuario <= date(2000, 3, 20)):
         print("Usted se encuentra en Invierno.")
-
     elif (fecha_usuario >= date(2000, 3, 21) and fecha_usuario <= date(2000, 6, 21)):
         print("Usted se encuentra en Primavera.")
-
     elif (fecha_usuario >= date(2000, 6, 21) and fecha_usuario <= date(2000, 9, 20)):
         print("Usted se encuentra en Verano.")
-
     elif (fecha_usuario >= date(2000, 9, 21) and fecha_usuario <= date(2000, 12, 20)):
         print("Usted se encuentra en Otoño.")
 
 elif (hemisferio == "S"):
     if (fecha_usuario >= date(2000, 12, 21) and fecha_usuario <= date(2000, 3, 20)):
         print("Usted se encuentra en Verano.")
-
     elif (fecha_usuario >= date(2000, 3, 21) and fecha_usuario <= date(2000, 6, 21)):
         print("Usted se encuentra en Otoño.")
-
     elif (fecha_usuario >= date(2000, 6, 21) and fecha_usuario <= date(2000, 9, 20)):
         print("Usted se encuentra en Invierno.")
-
     elif (fecha_usuario >= date(2000, 9, 21) and fecha_usuario <= date(2000, 12, 20)):
         print("Usted se encuentra en Primavera.")
-
 else: pass
 
 print("\n\n")
