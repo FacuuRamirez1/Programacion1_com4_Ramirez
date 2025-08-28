@@ -1,4 +1,69 @@
+# Ejercicio 1 - Sistema de becas estudiantiles
+print("Ejercicio 1 \n")
+nombre_completo = input("Ingrese su nombre y apellido: ")
+edad = int(input("Ingrese su edad: "))
+promedio_g = float(input("Ingrese su promedio general: "))
+ing_fam = float(input("¿Cuáles son sus ingresos familiares mensuales? "))
+res_beca = ""
+
+if promedio_g >= 0 and promedio_g < 6:
+    res_beca = "Beca rechazada"
+elif promedio_g >= 6 and promedio_g < 10:
+    if ing_fam < 300000:
+        res_beca = "Beca completa"
+    elif ing_fam >= 300000 and ing_fam < 600000:
+        res_beca = "Media beca"
+    elif ing_fam > 600:
+        res_beca = "Becha rechazada"
+else: print("Ingrese un promedio válido")
+
+print(f'✔ {nombre_completo}, {edad} años')
+print(f'Promedio: {round(promedio_g, 1)}')
+print(f'Ingresos: ${ing_fam}')
+print(f'Resultado: {res_beca}')
+print("\n\n")
+
+# Ejercicio 2 - Gestión de turnos hospitalarios
+
+print("Ejercicio 2 \n")
+nom_completo = input("Ingrese su nombre completo: ")
+dni = (input("Ingrese su DNI: "))
+edad_user = int(input("Ingrese su edad: "))
+obra_social = input("¿Tiene obra social? (si/no): ").lower()
+prioridad = input("Ingrese el nivel de urgencia (emergencia, urgente o control): ").lower()
+prioridad_m = ["emergencia","urgente","control"]
+dni_v = 0
+
+def validar_dni (dni):
+    dni_v = dni if (len(dni) == 8)  else "DNi inválido"
+    if dni_v == dni: return dni_v
+
+res_p = ""
+turno_asig = ""
+
+if (prioridad == prioridad_m[0]):
+    turno_asig = "Guardia"
+    res_p = prioridad_m[0]
+elif (prioridad == prioridad_m[1]):
+    res_p = prioridad_m[1]
+    if obra_social == "si":
+        turno_asig = "Turno en menos de 24hs"
+    else: turno_asig = "Turno en 48hs"
+elif(prioridad == prioridad_m[2]):
+    res_p = prioridad_m[2]
+    if edad > 65: 
+        turno_asig = "Turno preferencial en 72hs"
+    else: turno_asig = "Turno normal en 7 días"
+
+print(f'✔ Paciente: {nom_completo}')
+print(f'DNI: {validar_dni(dni)}')
+print(f'Edad: {edad_user}')
+print(f'Prioridad: {res_p}')
+print(f'Turno asignado: {turno_asig}')
+print("\n\n")
+
 # Ejercicio 3 — Evaluación de crédito bancario
+print("Ejercicio 3 \n")
 
 nombre_apellido = input("Ingrese su nombre y apellido: ")
 cuit = (input("Ingrese su cuit/cuil (formato xx-xxxxxxxx-x): ").strip().split("-"))
