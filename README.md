@@ -1,6 +1,6 @@
 <h1 align="center">Hola, soy Facundo Ramírez 👋</h1>
 
 **Legajo:** 802130  
-**Año de cursado:** 1ro   
+**Año de cursado:** 1ro  
 **Comisión:** 4  
-**Docente:** Cinthia Rigoni y Ramiro Hualpa
+**Docente:** Cinthia Rigoni
