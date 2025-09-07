@@ -1,26 +1,26 @@
 # ---------- Ejercicio 1 - Bucle for ----------
-#abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-#corrimiento = int(input("Ingresel el número de corrimiento: "))
-#mensaje = ""
-#letra = ""
-#aux = ""
-#mensajes_finales = []
-#
-#for oficial in range(1, 6):
-#    mensaje = input(f'Ingrese el mensaje para el oficial {oficial}: ').lower()
-#    mensaje_encript = ""
-#    for letra in mensaje:
-#        if letra in abecedario:
-#            aux =  abecedario.index(letra)
-#            n_aux = (aux + corrimiento) % len(abecedario)
-#            mensaje_encript += abecedario[n_aux]
-#        else:
-#            mensaje_encript += letra
-#    mensajes_finales.append(mensaje_encript)
-#            
-#for oficial in range(1, 6):
-#    print(f'Mensaje para el oficial {oficial}:')
-#    print(mensajes_finales[oficial - 1])
+abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+corrimiento = int(input("Ingresel el número de corrimiento: "))
+mensaje = ""
+letra = ""
+aux = ""
+mensajes_finales = []
+
+for oficial in range(1, 6):
+    mensaje = input(f'Ingrese el mensaje para el oficial {oficial}: ').lower()
+    mensaje_encript = ""
+    for letra in mensaje:
+        if letra in abecedario:
+            aux =  abecedario.index(letra)
+            n_aux = (aux + corrimiento) % len(abecedario)
+            mensaje_encript += abecedario[n_aux]
+        else:
+            mensaje_encript += letra
+    mensajes_finales.append(mensaje_encript)
+            
+for oficial in range(1, 6):
+    print(f'Mensaje para el oficial {oficial}:')
+    print(mensajes_finales[oficial - 1])
 
 
 # ---------- Ejercicio 2 - Bucle while ----------
