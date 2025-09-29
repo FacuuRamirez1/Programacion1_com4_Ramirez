@@ -14,5 +14,4 @@ intentos = 6
 
 p_elegida = palabras[elegir_p(palabras)]
 while True:
-
     ing_l = input("Ingrese una letra: ").lower()
