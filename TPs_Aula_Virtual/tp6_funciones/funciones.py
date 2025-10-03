@@ -23,25 +23,25 @@ def informacion_personal(nombre, apellido, edad, residencia):
 # 4. Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 def calcular_area_circulo(radio):
     area = pi * (radio**2)
-    return print(f'El área del triángulo es {area}')
+    return print(f'El área del triángulo es {area:.2f}')
 
 def calcular_perimetro_circulo(radio):
     perimetro = 2 * pi * radio
-    return print(f'El perímetro del triángulo es {perimetro}')
+    return print(f'El perímetro del triángulo es {perimetro:.2f}')
 
 # 5. Crear una función llamada segundos_a_horas(segundos) que reciba
 # una cantidad de segundos como parámetro y devuelva la cantidad
 # de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
 def segundos_a_horas(segundos):
-    horas = segundos / 60
+    horas = (segundos / 60) / 60
     return print(f'{segundos} equivalen a {horas} horas')
 
 # 6. Crear una función llamada tabla_multiplicar(numero) que reciba un
 # número como parámetro y imprima la tabla de multiplicar de ese
 # número del 1 al 10. Pedir al usuario el número y llamar a la función.
-def tabla_multiplicar(numero):
-    for i in range(10):
-        return print(f'{numero} * {i} = {numero*i}')
+def tabla_multiplicar(numero, i):
+    res = numero * i
+    return print(f'{numero} * {i} = {res}')
 
 # 7. Crear una función llamada operaciones_basicas(a, b) que reciba
 # dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.

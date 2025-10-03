@@ -28,18 +28,23 @@ seg = float(input("Ingrese la cantidad de segundos: "))
 segundos_a_horas(seg)
 
 print("\nEjercicio 6")
-numero = int(print("Ingrese un número: "))
-tabla_multiplicar(numero)
+numero = int(input("Ingrese un número entero: "))
+for i in range(11):
+    tabla_multiplicar(numero, i)
 
 print("\nEjercicio 7")
 a = int(input("Ingrese el primer número: "))
 b = int(input("Ingrese el segundo número: "))
+resultados = operaciones_basicas(a, b)
 print("Los resultados de la suma, resta, multiplicación y división entre números son:")
-operaciones_basicas(a, b)
+print(f'Suma: {resultados[0]}')
+print(f'Resta: {resultados[1]}')
+print(f'Multiplicación: {resultados[2]}')
+print(f'División: {resultados[3]}')
 
 print("\nEjercicio 8")
 peso = float(input("Ingrese su peso en KG: "))
-altura = float(int("Ingrese su altura en mts: "))
+altura = float(input("Ingrese su altura en mts: "))
 calcular_imc(peso, altura)
 
 print("\nEjercicio 9")
