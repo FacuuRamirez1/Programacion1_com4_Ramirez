@@ -1,50 +1,33 @@
-# ---------- Funciones ----------
+# ====================================
+#          PROGRAMA PRINCIPAL
+# ====================================
+from funciones_ahorcado import *
 
-# Función para elegir palabra
-def elegir_p(palabras):
-    n = random.randint(0, len(palabras))
-    return n
-
-# ---------- Programa Principal ----------
-import random
-
-palabras = ["JAVA", "JavaScript", "Python", "PHP", "SQL", "Ruby", "Swift", "Rust", "TypeScript", "Visual Basic"]
-letras = []
-letras_adiv = []
+palabra = elegir_p(palabras).upper()
+letras_us = set()
+letras_adiv = set()
 intentos = 6
 
-p_elegida = palabras[elegir_p(palabras) - 1].upper()
 print("BIENVENIDO AL AHORCADO!")
-for i in range(len(p_elegida)):
-    print("_ ", end="")
-print("")
+while intentos != 0 and set(palabra) != letras_adiv:
+    mostrar_ahorcado(intentos)
+    mostrar_p(palabra, letras_adiv)
+    print(f'')
+    letra = ingresar_letra(letras_us)
+    letras_us.add(letra)
 
-while True:
-    if intentos != 0:
-        ing_l = input("\n\nIngrese una letra: ").upper()
-        if ing_l in p_elegida:
-            print(f'Haz adivinado la letra {ing_l}!')
-            letras_adiv.append(ing_l)
-            letras.append(ing_l)
-            for i in range(len(p_elegida)):
-                if i == ing_l:
-                    print(f'{ing_l} ',end="")
-                else:
-                    print("_ ", end="")
-            print("")
-        else:
-            print("\nLa letra no se encuentra en la palabra!")
-            intentos -= 1
-            letras_adiv.append(ing_l)
-            letras.append(ing_l)
-            print(f'Intentos disponibles: {intentos}\n')
-            print(f'Letras ya ingresadas:')
-            for i in range(len(letras)):
-                print(f'{letras[i]} ', end="")
-            print(f'\nLetras adivinadas: ')
-            for i in range(len(letras_adiv)):
-                print(f'{letras_adiv[i]} ', end="")
+    if letra in palabra:
+        letras_adiv.add(letra)
+        print("Has adivinado una letra!")
     else:
-        print("Perdiste! :(")
-        print("Se han acabado los intentos!")
-        break
+        intentos -= 1
+        print(f'Incorrecto! Te quedan {intentos} intentos.')
+mostrar_ahorcado(intentos)
+mostrar_p(palabra, letras_adiv)
+if set(palabra) == letras_adiv:
+    print("\nGanaste!")
+    print(f'Has adivinado la palabra: {palabra}')    
+
+else:
+    print("\nPerdiste!")
+    print(f'La palabra era: {palabra}')
