@@ -14,10 +14,10 @@ while True:
     opc = int(input("Ingrese una opción (nro correspondiente): "))
     try:
         if opc == 1:
-            print("Guardar objeto en la mochila")
+            print("¡Guardar objeto en la mochila!")
         elif opc == 2:
-            print("Ver Mochila")
+            print("¡Ver Mochila!")
         elif opc == 3:
             break
     except ValueError:
-        print("Ingrese una opción válida.")
+        print("¡Ingrese una opción válida!")
